@@ -2,6 +2,7 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
+
 def mapa(
     df: pd.DataFrame,
     location: str,
@@ -10,7 +11,7 @@ def mapa(
     hover_name: str,
     hover_data: str,
     color_continuous_scale: str,
-    title: str,
+    title: str = None,
 ):
     fig = px.choropleth(
         data_frame=df,
@@ -24,7 +25,7 @@ def mapa(
     )
     fig.update_layout(
         geo=dict(
-            scope='usa',  # Foca no mapa dos EUA
+            scope="usa",  # Foca no mapa dos EUA
             showframe=False,
             showcoastlines=True,
         ),

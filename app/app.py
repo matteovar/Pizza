@@ -1,6 +1,9 @@
 import streamlit as st
-from streamlit_option_menu import option_menu
 from src.pages.page1 import visual as show_visual
+from src.pages.page2 import mapas as show_mapa
+from src.pages.page3 import logistic as show_log
+from src.pages.page4 import porce_map as show_perc
+from streamlit_option_menu import option_menu
 
 st.set_page_config(page_title="Sales App", layout="wide")
 
@@ -41,8 +44,11 @@ def main():
             menu_title=None,
             options=[
                 "General Informations",
+                "Pizza Orders by State",
+                "Consumer Trends",
+                "Delayed Ordes by State",
             ],
-            icons=["info-circle", "bar-chart-line", "gift", "people"],
+            icons=["info-circle", "bi-pie-chart", "bi-person", "people"],
             default_index=0,
             styles={
                 "container": {
@@ -63,6 +69,12 @@ def main():
     # Navegação para cada página
     if selected == "General Informations":
         show_visual()
+    elif selected == "Pizza Orders by State":
+        show_mapa()
+    elif selected == "Consumer Trends":
+        show_log()
+    elif selected == "Delayed Ordes by State":
+        show_perc()
 
 
 if __name__ == "__main__":

@@ -1,13 +1,13 @@
-import streamlit as st
 import pandas as pd
 import plotly.express as px
+import streamlit as st
 
 
 def bar_chart1(
     df: pd.DataFrame,
     x: str,
     y: str,
-    title: str = "Gráfico",
+    title: str = None,
     color=None,
     orientation="v",
     x_label: str = None,
