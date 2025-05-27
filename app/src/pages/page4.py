@@ -13,7 +13,7 @@ def porce_map():
         "Monitorar atrasos ajuda a identificar gargalos logísticos",
     )
     delay = df["Delay (min)"].mean()
-    info(f"Tempo médio de atraso: {delay:.0f} minutes")
+    info(f"Average delay time {delay:.0f} minutes")
 
     agrupado = (
         df.groupby("State")
