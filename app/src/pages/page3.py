@@ -8,7 +8,10 @@ from src.utils.title import title
 
 def logistic():
 
-    title("Consumer Trends")
+    title(
+        "Customer Behavior",
+        "Aqui analisamos como o cliente consome: tamanho e pagamento.",
+    )
 
     cols = st.columns(2)
     with cols[0]:

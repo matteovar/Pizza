@@ -29,7 +29,7 @@ def mapa(
             showframe=False,
             showcoastlines=True,
         ),
-        width=1200,
+        width=500,
         height=800,
     )
     st.plotly_chart(fig)

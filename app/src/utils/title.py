@@ -1,22 +1,14 @@
 import streamlit as st
 
-def title(title:str):
-    """
-    Function to set the title of the Streamlit app.
-    
-    Parameters:
-    title (str): The title to be displayed in the app.
-    """
+
+def title(title: str, subtitle: str):
+
     st.markdown(
         f"""
-        <style>
-            .stTitle {{
-                color: white;
-                font-size: 24px;
-                text-align: center;
-            }}
-        </style>
-        <h1 class="stTitle">{title}</h1>
+        <div style=padding: 10px 0;'>
+            <h1 style='color: white; font-size: 42px; text-align: center;'>{title}</h1>
+            <p style='color: white; font-size: 18px;text-align: center;'>{subtitle}</p>
+        </div>
         """,
         unsafe_allow_html=True,
     )

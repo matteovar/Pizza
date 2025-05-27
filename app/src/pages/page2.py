@@ -5,7 +5,10 @@ from src.utils.title import title
 
 
 def mapas():
-    title("Pizza Orders by State")
+    title(
+        "Geographic Distribution",
+        "Este mapa mostra a concentração de pedidos por estado",
+    )
     order_maps = df.groupby(["State"])["Order ID"].count().reset_index()
 
     mapa(

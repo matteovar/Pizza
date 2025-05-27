@@ -6,7 +6,10 @@ from src.utils.title import title
 
 
 def visual():
-    title("General Informations")
+    title(
+        "General Informations",
+        "Principais métricas do sistema de entregas para entender o comportamento geral das vendas.",
+    )
 
     cols = st.columns(4)
     with cols[0]:
